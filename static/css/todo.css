@@ -1,0 +1,145 @@
+.todo-body {
+  background: rgb(47,1,120);
+  background: rgb(47,1,120);
+  background: linear-gradient(180deg, rgba(47,1,120,1) 0%, rgba(255,255,255,1) 100%);
+}
+
+.todo-wrapper {
+  width: 900px;
+  margin: 0 auto;
+  padding: 30px 30px 50px;
+  box-shadow: 0 0 10px 0 lightgray;
+  background-color: #f0eeee;
+}
+
+#datainput {
+  background-color: transparent;
+  font-size: 20px;
+  width: 300px;
+  border-bottom: #888 solid;
+}
+
+.todo_label_input {
+  margin-bottom: 20px;
+}
+
+input[type="radio"] {
+    margin: 0;
+}
+
+button#submit, button#priority, button#remove {
+  padding: 5px 10px;
+  background-color: #A084DC;
+  color: white;
+  border-style: none;
+}
+
+.done_btn, .delete_btn {
+    width: 20px;
+    height: 20px;
+    margin: 10px;
+}
+
+.done_btn {
+  background: olivedrab;
+}
+
+.delete_btn {
+  background: firebrick;
+}
+
+
+.todo_filter {
+  display: flex;
+  text-align: center;
+  justify-content: space-around;
+}
+
+hr {
+  margin: 30px 0px 30px 0px;
+}
+
+button#priority { 
+    background-color: olivedrab; 
+}
+
+button#remove { 
+    background-color: firebrick; 
+}
+
+table {
+  margin-top: 2rem;
+  border: solid 2px grey;
+  border-collapse: collapse;
+}
+
+th, td {
+  border: solid 1px grey;
+  border-collapse: collapse;
+}
+
+th {
+  background-color: lightgrey;
+  padding: 0 0.5rem 0;
+}
+
+th#todoLabel { 
+    width: 200px;
+}
+
+th#dateLabel { 
+    width: 100px; 
+}
+
+td { 
+    text-align: center; 
+}
+
+td input[type='checkbox'] {
+     margin: 0; 
+}
+
+fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+.radio-inline__input {
+  clip: rect(1px, 1px, 1px, 1px);
+  position: absolute !important;
+}
+
+.radio-inline__label {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  margin-right: 18px;
+  border-radius: 3px;
+  transition: all .2s;
+}
+
+.radio-inline__input:checked + .radio-inline__label {
+  background: #A084DC;
+  color: #fff;
+  text-shadow: 0 0 1px rgba(0,0,0,.7);
+}
+
+.radio-inline__input:focus + .radio-inline__label {
+  outline-color: #4D90FE;
+  outline-offset: -2px;
+  outline-style: auto;
+  outline-width: 5px;
+}
+
+.delete-todo {
+  background-color: transparent;
+}
+
+.backtoindex {
+  display: flex;
+  justify-content: end;
+  width: 10px;
+  margin: 0 0 0 auto;
+  color: black;
+}

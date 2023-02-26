@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+{% block title %}
+  <title>Setting</title>
+{% endblock %}
+{% block body %}
+<div class="setting-content-wrapper">
+    <div class="setting_wrapper">
+      <h1>設定</h1>
+      <img class="profile_img" src=./static/img/{{ uname.user_name }}.jpg>
+      <div class="icon_name">
+          <p>{{ uname.user_name }}</p>
+          <div class="upload_image">
+            <h3>画像のアップロード</h3>
+            <form method="post" enctype="multipart/form-data">
+            <input type="file" id="image_select" name="image" value="profile.jpg">
+            <input type="submit" id="upload_image" value="Upload">
+            </form>
+      </div>
+      <div class="user_profile">
+      </div>
+      <div class="change_profile">
+          <p class="user-edit">ユーザー情報の編集</p>
+          <div class="change_info_wrapper">
+          <form id="change_username" action="/henkouN" method="post">
+              <p>Username</p>
+              <input id="username_input" name="uname" type="text" required placeholder="{{ uname.user_name }}">
+              <br><button id="change">変更</button>
+          </form>
+          </div>
+          <div class="change_info_wrapper">
+          <form id="change_email" action="/henkouE" method="post">
+              <p>Email</p>
+              <input id="email_input" name="ema" type="text" required>
+              <br><button id="change">変更</button>
+          </form>
+          </div>
+          <div class="change_info_wrapper">
+          <form id="change_password" action="/henkouP" method="post">
+              <p>Password</p>
+              <input id="password_input" name="passw" type="password" required>
+              <br><button id="change">変更</button>
+          </form>
+          </div>
+      </div>
+      </div>
+  <a href="{{ url_for('index') }}">Homeへ戻る</a>
+  </div>
+</div>
+  <script
+  src="{{url_for('static',filename='js/setting.js')}}"
+  type="text/javascript"
+  ></script>
+{% endblock %}

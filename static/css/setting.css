@@ -1,0 +1,76 @@
+.setting-content-wrapper {
+    background-color: #404258;
+}
+
+.setting_wrapper {
+    padding: 60px 80px 60px 80px;
+}
+
+.setting_wrapper h1 {
+    color: white;
+}
+
+.user-edit {
+    color: white;
+    font-weight: 500;
+    font-size: 40px;
+}
+
+.change_profile {
+    margin: 20px 0px 20px 0px;
+    width: 412px;
+}
+
+.change_info_wrapper {
+    margin-bottom: 50px;
+}
+
+.change_info_wrapper ::placeholder {
+    color: rgb(59, 59, 59);
+}
+
+.change_profile input{
+    width: 400px;
+    height: 40px;
+}
+
+.change_info_wrapper p{
+    margin-bottom: 10px;
+    color: white;
+}
+
+#change_username, #change_email, #change_password {
+    margin-bottom: 20px;
+}
+
+.material-icons.large-size {
+    font-size: 200px;
+    color: white;
+}
+
+.icon_name {
+    width: 200px;
+    text-align: center;
+}
+
+#change {
+    border: 1px solid white;
+    display: flex;
+    justify-self: right;
+    margin-top: 3px; 
+    padding: 5px 25px 5px 25px;
+    border-radius: 10px;
+}
+
+#username_input, #email_input, #password_input {
+    border: 1px solid white;
+    background-color: #6B728E;
+    color: white;
+    padding-left: 10px;
+}
+
+.profile_img {
+    border-radius: 100px;
+    width: 200px;
+    height: 200px;
+}

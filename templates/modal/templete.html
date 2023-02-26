@@ -1,0 +1,31 @@
+<button class="templete-open" id="open-modal" name="open-modal-btn"><ion-icon name="reader"></ion-icon></button>
+<div id="demo-modal" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <span class="close">×</span>
+            <h2>定型文</h2>
+        </div>
+        <div class="templete-list-wrapper">
+            <ul id="templete-list">
+                {% for teike in teikei %}
+            <li>
+            <button class="templete-msg" id=templete1 value={{ teike.message }}>{{ teike.message }}</button>
+            </li>
+            <form action="/delete_teikei" method="POST">
+            <input type="hidden" value="{{ channel.id }}" name="channel_id"/>
+            <button class="templete-delete" name="teikei_id" value="{{ teike.id }}">
+                <ion-icon name="trash-bin-outline"></ion-icon>
+            </button>
+            </form>
+                {% endfor %}
+            </ul>
+        </div>
+        <div class="modal-body">
+            <form action='/teikei' class='registerform' id="tourokuform" name="registerform" method="post">
+                <input class="tourokuinput" type="text" id="tourokuform" name="register" required>
+                <input type="hidden" name='cid' value='{{ channel.id }}'>
+                <button id="submit-templete">登録</button>
+            </form>
+        </div>
+    </div>
+</div>

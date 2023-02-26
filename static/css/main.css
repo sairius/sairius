@@ -1,0 +1,271 @@
+.channelpage {
+  display: flex;
+  flex-direction: column;
+}
+
+.bg-img {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 0;
+  padding-bottom: 45%;
+  background: rgb(47,1,120);
+  z-index: 1;
+
+  mask-image: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(202, 172, 166, 1));
+  -webkit-mask-image: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(rgba(0, 0, 0, 1)),
+    to(rgba(0, 0, 0, 0))
+  );
+}
+
+.welcome-back {
+  z-index: 2;
+}
+
+.bg-img::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 0;
+  z-index: 1;
+}
+
+.main-content {
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.welcome-back {
+  color: white;
+}
+
+.floating-container {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+}
+
+.floating-item {
+  position: relative;
+  display: flex;
+  cursor: pointer;
+}
+
+.floating-item:hover {
+  top:-3px;
+  transition: all .3s;
+}
+
+#fadeUp{
+  animation-name:fadeUpAnime;
+  animation-duration:0.5s;
+  animation-fill-mode:forwards;
+  opacity:0;
+  }
+  
+  @keyframes fadeUpAnime{
+    from {
+      opacity: 0;
+    transform: translateY(100px);
+    }
+  
+    to {
+      opacity: 1;
+    transform: translateY(0);
+    }
+  }
+
+.item-content {
+  width: 350px;
+  height: 200px;
+  background-color: aliceblue;
+  border-radius: 20px;
+  margin: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.item-content p {
+  font-size: 25px;
+  color: black;
+}
+
+.list-icon {
+  margin-right: 10px;
+  color: black;
+}
+
+.list-icon ion-icon {
+  font-size: 50px;
+}
+
+.channel-title {
+  display: flex;
+  gap: 24px;
+}
+
+.channel-title button {
+  margin: 30px 0;
+  background-color: var(--navy);
+}
+
+.channel-title button:hover {
+  background-color: var(--carbon);
+}
+
+.channel-box {
+  background-color: aliceblue;
+  border-radius: 20px;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  min-height: 50%;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+.channel-box li {
+  list-style: none;
+  border-bottom: solid 1px black;
+  margin-bottom: 5px;
+  padding-bottom: 3px;
+  padding-right: 16px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.channel-box li:hover {
+  border-bottom: 1px solid lightgrey;
+  padding-bottom: 2px;
+  cursor: pointer;
+}
+
+.channel-box li a {
+  color: grey;
+}
+
+.channel-box li a:hover {
+  color: var(--dark_pink);
+}
+
+.pagination-container,
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pagination-container {
+  width: 100%;
+  border-bottom: 2px solid var(--grey);
+  box-shadow: 0 32px 30px -30px var(--wood);
+}
+
+.pagination {
+  padding-left: 0;
+}
+
+.pagination li.colored {
+  background-color: var(--navy);
+  color: var(--snow);
+}
+
+#prev,
+#next,
+.pagination li {
+  padding: 16px;
+}
+
+#prev:hover,
+#next:hover {
+  cursor: pointer;
+}
+
+.prev:hover .next:hover {
+  cursor: pointer;
+  background-color: var(--navy);
+  color: var(--snow);
+}
+
+@media screen and (max-width: 639px) {
+  .main-content {
+    width: 90vw;
+  }
+  .channel-title {
+    flex-direction: column;
+    gap: 0;
+  }
+  .channel-title h1 {
+    text-align: center;
+  }
+  .channel-box {
+    width: 100%;
+  }
+  .channel-box li a {
+    font-size: 16px;
+  }
+  .item-content {
+    width: 100px;
+    height: 100px;
+  }
+  .item-content p{
+    display: none;
+  }
+  .welcome-back {
+    color: black;
+  }
+}
+
+@media only screen and (min-width: 640px) and (max-width: 1023px) {
+  .main-content {
+    width: 70vw;
+  }
+  .channel-title {
+    flex-direction: column;
+  }
+  .channel-title h1 {
+    text-align: center;
+  }
+  .channel-box {
+    width: 80%;
+  }
+  .channel-box li a {
+    font-size: 16px;
+  }
+  .item-content {
+    width: 200px;
+    height: 150px;
+  }
+  .welcome-back {
+    color: black;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .main-content {
+    width: 70vw;
+  }
+  .channel-title {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .channel-box {
+    width: 80%;
+  }
+
+  .channellist {
+    color: white;
+  }
+}
